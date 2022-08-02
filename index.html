@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			字体测试
+		</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
+		<style>
+			@font-face { 
+                font-family: "TestChineseFont";
+                src: url("./fonts/obfused-chinese.ttf"); 
+            }
+            .test-chinese { 
+                font-family:TestChineseFont; 
+            } 
+
+			@font-face { 
+                font-family: "TestSpecificFont";
+                src: url("./fonts/obfused-specific.ttf"); 
+            }
+            .test-specific { 
+                font-family:TestSpecificFont; 
+            } 
+            .center{
+				text-align: center;
+                margin: auto auto; 
+            }
+		</style>
+		<script>
+		</script>
+	</head>
+	<body>
+		<div class="center">
+			<p>
+				<span class="test-chinese">测试字体ABCDefg123</span>（使用字体，内容正确，显示乱码）
+			</p>
+			<p>
+				<span class="test-chinese">洓蛳贝讯ABCDefg123</span>（使用字体，显示正确，内容乱码）
+			</p>
+			<p>
+				<span class="test-specific">测试字体ABCDefg123</span>（使用字体，内容正确，显示乱码）
+			</p>
+			<p>
+				<span class="test-specific">2D3字Ae体B1试fgC测</span>（使用字体，显示正确，内容乱码）
+			</p>
+            <p>
+				<span class="no-test">测试字体ABCDefg123</span>（正常）
+			</p>
+		</div>
+	</body>
+
+</html>
